@@ -15,8 +15,8 @@ const Footer = () => {
             </div>
             <hr />
             <div className="d-flex justify-content-around align">
-                <p>©Copyrighted by Deshi Courier.</p>
-                <p>Wonderful Services With 'Deshi Courier'.</p>
+                <p>©Copyrighted by Dream Camera Shop.</p>
+                <p>Wonderful Services With 'Dream Camera Shop'.</p>
             </div>
         </div>
     );

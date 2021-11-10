@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,41 +6,78 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import {
+    // BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+} from 'react-router-dom';
+import MyOrder from '../YourServices/MyOrder';
+import ManageAllServices from '../ManageAllServices/ManageAllServices';
+import AllOrders from '../ManageAllOrders/AllOrders';
+import AddNewService from '../AddNewService/AddNewService';
+import Payment from '../payment/Payment';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import useAuth from '../../hooks/useAuth';
 
-const drawerWidth = 200;
+const drawerWidth = 240;
 
 function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const { user, admin, logOut } = useAuth();
+
+    let { path, url } = useRouteMatch();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
-        <div>
+        <div className="ms-2">
             <Toolbar />
             <Divider />
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map(
-                    (text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    )
+                <Link to={`${url}`}>
+                    <button className="btn fw-bold">YOUR ORDERS</button>
+                </Link>
+
+                {admin && (
+                    <Box>
+                        <Link to={`${url}/allOrders`}>
+                            <button className="btn fw-bold">
+                                MANAGE ALL ORDERS
+                            </button>
+                        </Link>
+
+                        <Link to={`${url}/ManageAllServices`}>
+                            <button className="btn fw-bold">
+                                MANAGE SERVICES
+                            </button>
+                        </Link>
+
+                        <Link to={`${url}/addNewService`}>
+                            <button className="btn fw-bold">
+                                ADD NEW SERVICES
+                            </button>
+                        </Link>
+
+                        <Link to={`${url}/makeAdmin`}>
+                            <button className="btn fw-bold">MAKE ADMIN</button>
+                        </Link>
+                    </Box>
                 )}
+
+                <Link to={`${url}/payment`}>
+                    <button className="btn fw-bold">PAYMENT</button>
+                </Link>
+                <br />
             </List>
         </div>
     );
@@ -95,6 +131,32 @@ function Dashboard(props) {
                                 Explore
                             </Link>
                         </Typography>
+                        {/* <Typography
+                            className="nav-item d-flex me-2 justify-content-center align-items-center border px-2"
+                            variant="h6"
+                            noWrap
+                            component="div"
+                        >
+                            {user.displayName}
+                        </Typography> */}
+                        <Typography
+                            className="nav-item d-flex justify-content-center align-items-center"
+                            variant="h6"
+                            noWrap
+                            component="div"
+                        >
+                            {user.email && (
+                                <div className="nav-item">
+                                    <button
+                                        onClick={logOut}
+                                        className="btn btn-warning"
+                                    >
+                                        <i className="fas fa-sign-out-alt"></i>{' '}
+                                        Log Out
+                                    </button>
+                                </div>
+                            )}
+                        </Typography>
                     </Toolbar>
                 </AppBar>
                 <Box
@@ -145,10 +207,26 @@ function Dashboard(props) {
                 >
                     <Toolbar />
 
-                    <Typography paragraph>
-                        Consequat mauris nunc congue nisi vitae suscipit.
-                        Fringilla
-                    </Typography>
+                    <Switch>
+                        <Route exact path={path}>
+                            <MyOrder></MyOrder>
+                        </Route>
+                        <Route path={`${path}/ManageAllServices`}>
+                            <ManageAllServices />
+                        </Route>
+                        <Route path={`${path}/allOrders`}>
+                            <AllOrders />
+                        </Route>
+                        <Route path={`${path}/addNewService`}>
+                            <AddNewService />
+                        </Route>
+                        <Route path={`${path}/payment`}>
+                            <Payment />
+                        </Route>
+                        <Route path={`${path}/makeAdmin`}>
+                            <MakeAdmin />
+                        </Route>
+                    </Switch>
                 </Box>
             </Box>
         </div>

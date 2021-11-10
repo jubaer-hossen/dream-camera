@@ -108,7 +108,7 @@ const AllOrders = () => {
                                 <p>Phone: {order.phone}</p>
                                 <br />
                                 <h6>
-                                    Order Condition:{' '}
+                                    Order Condition:
                                     <span className="fw-bold">
                                         {order.orderCondition}
                                     </span>
@@ -123,14 +123,14 @@ const AllOrders = () => {
                                     </button>
                                     <button
                                         className={
-                                            order.orderCondition !== 'Approved'
+                                            order.orderCondition !== 'Shipped'
                                                 ? 'btn btn-danger mx-2 px-5 my-4'
                                                 : 'disabled btn btn-danger mx-2 px-5 my-4'
                                         }
                                         onClick={() => handlePending(order._id)}
                                     >
-                                        {order.orderCondition === 'Approved'
-                                            ? 'Approved'
+                                        {order.orderCondition === 'Shipped'
+                                            ? 'Shipped'
                                             : 'Pending'}
                                     </button>
                                 </div>

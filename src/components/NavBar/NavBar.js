@@ -57,7 +57,7 @@ const NavBar = () => {
                                     Explore
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link
                                     className="nav-link active"
                                     aria-current="page"
@@ -65,45 +65,8 @@ const NavBar = () => {
                                 >
                                     Dashboard
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li className="nav-item">
-                                <Link
-                                    className="nav-link active"
-                                    aria-current="page"
-                                    to="/myOrder"
-                                >
-                                    My-Order
-                                </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link
-                                    className="nav-link active"
-                                    aria-current="page"
-                                    to="/allOrders"
-                                >
-                                    AllOrders
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    className="nav-link active"
-                                    aria-current="page"
-                                    to="/ManageAllServices"
-                                >
-                                    ManageAllServices
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    className="nav-link active"
-                                    aria-current="page"
-                                    to="/AddNewService"
-                                >
-                                    AddNewService
-                                </Link>
-                            </li>
                             <li className="nav-item">
                                 <Link
                                     className="nav-link active"
@@ -115,6 +78,15 @@ const NavBar = () => {
                             </li>
                         </ul>
                         <ul className="navbar-nav me-5 mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <Link
+                                    className="nav-link active fw-bold"
+                                    aria-current="page"
+                                    to="/dashboard"
+                                >
+                                    Dashboard
+                                </Link>
+                            </li>
                             <li className="nav-item">
                                 <span className="text-white me-2 nav-link">
                                     {user.displayName}

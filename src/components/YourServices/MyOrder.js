@@ -3,7 +3,7 @@ import useAuth from '../../hooks/useAuth';
 import './MyOrder.css';
 
 const MyOrder = () => {
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
     const email = user.email;
