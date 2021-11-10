@@ -3,10 +3,14 @@ import React, { useEffect, useState } from 'react';
 const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/orders')
+    const loadOrder = () => {
+        fetch('http://localhost:5000/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data));
+    };
+
+    useEffect(() => {
+        loadOrder();
     }, []);
 
     // update data
@@ -25,14 +29,12 @@ const AllOrders = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    // console.log(data);
+                    console.log(data);
                     alert('Updated successfully');
-                    const remainingData = orders.filter(
-                        order => order._id != id
-                    );
-                    setOrders(remainingData);
-                    setOrders(data);
-                    // window.location.reload(false);
+                    loadOrder();
+
+                    // const remaining = orders.filter(order => order._id !== id);
+                    // setOrders(remaining);
                 }
             });
     };
@@ -62,6 +64,10 @@ const AllOrders = () => {
     return (
         <div className="text-center container order-bg">
             <h1>Manage All Order </h1>
+            <h2>
+                {orders.length <= 1 ? 'Total Order: ' : 'Total Orders: '}
+                {orders.length}
+            </h2>
             <div className="row row-cols-1 row-cols-md-2 g-4 my-5">
                 {orders.map(order => (
                     <div key={order._id} className="col">
