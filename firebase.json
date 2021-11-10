@@ -1,0 +1,13 @@
+{
+  "database": {
+    "rules": "firebase init"
+  },
+  "hosting": {
+    "public": "buld",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

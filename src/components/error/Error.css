@@ -1,0 +1,12 @@
+.error-bg-img {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.123),
+            rgba(0, 0, 0, 0.185)
+        ),
+        url(../../img/5203299.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-shadow: 2px 2px 4px #000000;
+    height: 100vh;
+}
