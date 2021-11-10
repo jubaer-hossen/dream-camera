@@ -1,62 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import './MyOrder.css';
 
 const MyOrder = () => {
-    // const [error, setError] = useState('');
-    const [orders, setOrders] = useState([]);
     const { user } = useAuth();
-    const email = user.email;
-    // console.log(email);
+
+    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        const url = `http://localhost:5000/orders?email=${user.email}`;
+        fetch(url)
             .then(res => res.json())
-            .then(data => {
-                setOrders(data);
-                console.log(data);
-                // if (orders.length == 0) {
-                //     setError("You don't have any orders");
-                // }
-                const userData = orders.filter(order => order.email == email);
-                setOrders(userData);
-                console.log(email);
-                console.log(orders);
-            });
-    }, [orders]);
+            .then(data => setOrders(data));
+    }, []);
 
-    const handleDelete = id => {
-        // console.log(id);
-        const proceed = window.confirm('Are you sure you want to Cancel');
-        if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
-
-            fetch(url, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount) {
-                        alert('deleted successfully');
-                        const remaining = orders.filter(
-                            order => order._id !== id
-                        );
-                        setOrders(remaining);
-                    }
-                });
-        }
-    };
     return (
-        <div className="text-center container order-bg">
-            <h1>Your All Order Here</h1>
-            {/* <h4 className="text-warning"> {error} </h4> */}
+        <div className="text-center">
+            <h1>
+                {orders.length <= 1 ? 'Your Order: ' : 'Your Orders: '}
+                {orders.length}
+            </h1>
             <div className="row row-cols-1 row-cols-md-2 g-4 my-5">
                 {orders.map(order => (
                     <div key={order._id} className="col">
-                        {/* {orders.length === 0 && (
-                            <p>You don't have any orders.</p>
-                        )} */}
+                        {orders.length === 0 && (
+                            <div className="d-flex justify-content-center pt-5 mt-5">
+                                <div className="spinner-border" role="status">
+                                    <span className="visually-hidden">
+                                        Loading...
+                                    </span>
+                                </div>
+                            </div>
+                        )}
                         <div className="card h-100 shadow">
                             <div>
                                 <img
@@ -88,15 +62,14 @@ const MyOrder = () => {
                                 <h5 className="card-title">
                                     Address: {order.address}
                                 </h5>
-                                <p>{order.phone}</p>
-                                <div>
-                                    <button
-                                        className="btn btn-danger px-5 my-4"
-                                        onClick={() => handleDelete(order._id)}
-                                    >
-                                        Cancel
-                                    </button>
-                                </div>
+                                <p>Phone: {order.phone}</p>
+                                <br />
+                                <h6>
+                                    Order Condition:{' '}
+                                    <span className="fw-bold">
+                                        {order.orderCondition}
+                                    </span>
+                                </h6>
                             </div>
                         </div>
                     </div>
