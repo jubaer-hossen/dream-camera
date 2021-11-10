@@ -7,13 +7,18 @@ const AddNewService = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/AddNewService', data).then(res => {
-            // console.log(res);
-            if (res.data.insertedId) {
-                alert('service added successfully');
-                reset();
-            }
-        });
+        axios
+            .post(
+                'https://gentle-citadel-90786.herokuapp.com/AddNewService',
+                data
+            )
+            .then(res => {
+                // console.log(res);
+                if (res.data.insertedId) {
+                    alert('service added successfully');
+                    reset();
+                }
+            });
     };
     return (
         <div className="text-center order-bg mt-5">

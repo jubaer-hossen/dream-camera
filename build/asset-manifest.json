@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.17ac4d97.chunk.css",
+    "main.js": "/static/js/main.18bbb941.chunk.js",
+    "main.js.map": "/static/js/main.18bbb941.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3569ff6c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3569ff6c.js.map",
+    "static/js/2.537ae8bc.chunk.js": "/static/js/2.537ae8bc.chunk.js",
+    "static/js/2.537ae8bc.chunk.js.map": "/static/js/2.537ae8bc.chunk.js.map",
+    "static/js/3.dff218b5.chunk.js": "/static/js/3.dff218b5.chunk.js",
+    "static/js/3.dff218b5.chunk.js.map": "/static/js/3.dff218b5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.17ac4d97.chunk.css.map": "/static/css/main.17ac4d97.chunk.css.map",
+    "static/js/2.537ae8bc.chunk.js.LICENSE.txt": "/static/js/2.537ae8bc.chunk.js.LICENSE.txt",
+    "static/media/Error.css": "/static/media/5203299.ce293654.jpg",
+    "static/media/about.css": "/static/media/colleagues-giving-fist-bump.6b911b47.jpg",
+    "static/media/Banner.css": "/static/media/wp1873195.aab2f7a2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3569ff6c.js",
+    "static/js/2.537ae8bc.chunk.js",
+    "static/css/main.17ac4d97.chunk.css",
+    "static/js/main.18bbb941.chunk.js"
+  ]
+}

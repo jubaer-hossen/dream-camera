@@ -15,7 +15,7 @@ const Shipping = () => {
     const orderCondition = 'pending';
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://gentle-citadel-90786.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -29,13 +29,15 @@ const Shipping = () => {
         data.productPrice = products.price;
         data.productDetails = products.details;
         console.log(data);
-        axios.post('http://localhost:5000/shipping', data).then(res => {
-            // console.log(res);
-            if (res.data.insertedId) {
-                alert('Order added successfully');
-                reset();
-            }
-        });
+        axios
+            .post('https://gentle-citadel-90786.herokuapp.com/shipping', data)
+            .then(res => {
+                // console.log(res);
+                if (res.data.insertedId) {
+                    alert('Order added successfully');
+                    reset();
+                }
+            });
     };
 
     console.log(products);

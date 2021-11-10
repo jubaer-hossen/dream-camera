@@ -4,12 +4,12 @@ import './Banner.css';
 const Banner = () => {
     return (
         <div>
-            <div className="bg-img d-flex justify-content-center align-items-center text-center"></div>
-            <div className="text-white bg-text">
-                <h1>Dream Camera Shop</h1>
-                <h5>
-                    Please, <br /> Choose your Dream Camera
-                </h5>
+            <div className="bg-img"></div>
+            <div className="text-white bg-text d-flex justify-content-center align-items-center text-center">
+                <div>
+                    <h1 className="text-center">Dream Camera Shop</h1>
+                    <h5> Choose your Dream Camera!</h5>
+                </div>
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     const loadOrder = () => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://gentle-citadel-90786.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data));
     };
@@ -17,7 +17,7 @@ const AllOrders = () => {
     const handlePending = id => {
         console.log(id);
 
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://gentle-citadel-90786.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -44,7 +44,7 @@ const AllOrders = () => {
         // console.log(id);
         const proceed = window.confirm('Are you sure you want to Cancel');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://gentle-citadel-90786.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

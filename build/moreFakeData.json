@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Pharmacy",
+        "details": "Pharmacy is the clinical health science that links medical science with chemistry and it is charged with the discovery, production, disposal,production, disposal, medical",
+        "img": "https://img.icons8.com/doodle/48/000000/pills.png"
+    },
+    {
+        "id": 2,
+        "name": "Medical Box",
+        "details": "Jual Household Multi-layered Medical Kit/first Aid Kit/medicine Box/medicine Box/medicine Storage Box/storage Box Terbaru Online Di Blibli",
+        "img": "https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-first-aid-kit-camping-icongeek26-linear-colour-icongeek26.png"
+    },
+    {
+        "id": 3,
+        "name": "Face Masks",
+        "details": " For example, if you only have two-layer masks, or if your disposable surgical mask has side gaps that a well-fitting cloth mask would pin down, then double up.",
+        "img": "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-face-mask-coronavirus-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
+    },
+    {
+        "id": 4,
+        "name": "Protective Gear",
+        "details": "Personal protective equipment is protective clothing, helmets, goggles, or other garments or equipment designed to protect the",
+        "img": "https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-protective-clothing-coronavirus-becris-lineal-color-becris.png"
+    },
+    {
+        "id": 5,
+        "name": "Antiseptic",
+        "details": "An antiseptic is an antimicrobial substance or compound that is applied to living tissue/skin to reduce the possibility of infection, sepsis, or putrefaction.",
+        "img": "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-antiseptic-coronavirus-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
+    },
+    {
+        "id": 6,
+        "name": "Hospital Equipment",
+        "details": "Defibrillators, patient monitors, surgical tables, EKGs, anesthesia machines, sterilizers, lights, ultrasounds, and electrosurgical units, ...",
+        "img": "https://img.icons8.com/doodle/60/000000/hospital-3.png"
+    }
+]

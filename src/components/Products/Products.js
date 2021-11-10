@@ -4,7 +4,7 @@ import ShowCameras from './ShowCameras';
 const Products = () => {
     const [cameras, setCameras] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/services';
+        const url = 'https://gentle-citadel-90786.herokuapp.com/services';
 
         fetch(url)
             .then(res => res.json())

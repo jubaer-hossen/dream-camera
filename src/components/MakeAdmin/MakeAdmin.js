@@ -12,7 +12,7 @@ const MakeAdmin = () => {
         // console.log('clicked');
         console.log(email);
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://gentle-citadel-90786.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
