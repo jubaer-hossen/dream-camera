@@ -61,7 +61,7 @@ const Review = () => {
     };
     return (
         <div className="text-center review">
-            <h1>This is a review</h1>
+            <h1>Please give feedback or review billow</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Input label="Review" register={register} required />
                 <br />

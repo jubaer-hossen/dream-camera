@@ -11,7 +11,7 @@ const MyOrder = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
-    }, []);
+    }, [user.email]);
 
     return (
         <div className="text-center review">
