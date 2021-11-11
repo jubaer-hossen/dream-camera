@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
+import './ShowReviews.css';
 
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -33,6 +35,12 @@ const ShowReviews = () => {
                                     <h4 className="card-title">
                                         {review.Rating}
                                     </h4>
+                                    <Rating
+                                        initialRating={review.Rating}
+                                        readonly
+                                        emptySymbol="far fa-star icon-color"
+                                        fullSymbol="fas fa-star icon-color"
+                                    ></Rating>
                                 </div>
                             </div>
                         </div>
