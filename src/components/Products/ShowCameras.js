@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ShowCameras = props => {
-    const { Name, img, _id, details, price, email } = props.courier;
+    const { Name, img, _id, details, price, email } = props.camera;
 
     return (
         <div className="col">
@@ -11,7 +11,7 @@ const ShowCameras = props => {
                 <div className="card-body">
                     <h4 className="card-title">{Name}</h4>
                     <h5 className="card-title">{email}</h5>
-                    <p className="card-text">{details}</p>
+                    <p className="card-text">{details.slice(0, 250)}</p>
                 </div>
                 <div>
                     <h3 className="card-title">Price: {price}</h3>

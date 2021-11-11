@@ -24,6 +24,7 @@ import AddNewService from '../AddNewService/AddNewService';
 import Payment from '../payment/Payment';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../hooks/useAuth';
+import Review from '../Review/Review';
 
 const drawerWidth = 240;
 
@@ -46,6 +47,16 @@ function Dashboard(props) {
             <List>
                 <Link to={`${url}`}>
                     <button className="btn fw-bold">YOUR ORDERS</button>
+                </Link>
+
+                <Link to={`${url}/payment`}>
+                    <button className="btn fw-bold">PAYMENT</button>
+                </Link>
+
+                <br />
+
+                <Link to={`${url}/review`}>
+                    <button className="btn fw-bold">REVIEW</button>
                 </Link>
 
                 {admin && (
@@ -73,11 +84,6 @@ function Dashboard(props) {
                         </Link>
                     </Box>
                 )}
-
-                <Link to={`${url}/payment`}>
-                    <button className="btn fw-bold">PAYMENT</button>
-                </Link>
-                <br />
             </List>
         </div>
     );
@@ -213,6 +219,9 @@ function Dashboard(props) {
                         </Route>
                         <Route path={`${path}/ManageAllServices`}>
                             <ManageAllServices />
+                        </Route>
+                        <Route path={`${path}/review`}>
+                            <Review />
                         </Route>
                         <Route path={`${path}/allOrders`}>
                             <AllOrders />

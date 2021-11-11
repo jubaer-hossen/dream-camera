@@ -21,11 +21,8 @@ const Products = () => {
             )}
             <h1>All Available Cameras</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4">
-                {cameras.slice(0, 6).map(courier => (
-                    <ShowCameras
-                        key={courier.id}
-                        courier={courier}
-                    ></ShowCameras>
+                {cameras.slice(0, 6).map(camera => (
+                    <ShowCameras key={camera.id} camera={camera}></ShowCameras>
                 ))}
             </div>
         </div>

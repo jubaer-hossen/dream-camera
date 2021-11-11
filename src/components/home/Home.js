@@ -1,4 +1,5 @@
 import Products from '../Products/Products';
+import ShowReviews from '../ShowReviews/ShowReviews';
 import Banner from './Banner';
 
 const Home = () => {
@@ -8,8 +9,12 @@ const Home = () => {
                 <Banner></Banner>
             </div>
 
-            <div>
+            <div className="my-5">
                 <Products></Products>
+            </div>
+
+            <div className="my-5">
+                <ShowReviews></ShowReviews>
             </div>
         </div>
     );
