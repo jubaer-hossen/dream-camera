@@ -14,7 +14,7 @@ const MyOrder = () => {
     }, []);
 
     return (
-        <div className="text-center">
+        <div className="text-center review">
             <h1>
                 {orders.length <= 1 ? 'Your Order: ' : 'Your Orders: '}
                 {orders.length}
