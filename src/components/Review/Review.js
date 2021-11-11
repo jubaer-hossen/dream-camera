@@ -3,8 +3,10 @@ import React from 'react';
 import './Review.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import useAuth from '../../hooks/useAuth';
 
 const Review = () => {
+    const { user } = useAuth();
     const Input = ({ label, register, required }) => (
         <>
             <label>{label}</label>
@@ -63,6 +65,16 @@ const Review = () => {
         <div className="text-center review">
             <h1>Please give feedback or review billow</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                    className="w-50 mb-3 d-none"
+                    placeholder="Name"
+                    value={user.displayName}
+                    {...register('Name', {
+                        required: true,
+                        maxLength: 200,
+                    })}
+                />
+                <br />
                 <Input label="Review" register={register} required />
                 <br />
                 <Select label="Rating" {...register('Rating')} />

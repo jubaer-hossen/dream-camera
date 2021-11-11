@@ -31,6 +31,7 @@ const ShowReviews = () => {
                         <div className="card h-100 shadow">
                             <div className="card-body">
                                 <div>
+                                    <h4>{review.Name}</h4>
                                     <p className="card-text">{review.Review}</p>
                                     <h4 className="card-title">
                                         {review.Rating}
