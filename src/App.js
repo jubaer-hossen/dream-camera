@@ -9,7 +9,7 @@ import Error from './components/error/Error';
 import Details from './components/details/Details';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import MyOrder from './components/YourServices/MyOrder';
 import ManageAllServices from './components/ManageAllServices/ManageAllServices';
 import AddNewService from './components/AddNewService/AddNewService';
@@ -69,7 +69,7 @@ function App() {
                             <Error></Error>
                         </Route>
                     </Switch>
-                    <Footer></Footer>
+                    {/* <Footer></Footer> */}
                 </Router>
             </AuthProvider>
         </div>

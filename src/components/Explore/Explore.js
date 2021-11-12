@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Footer/Footer';
 import ShowExplores from './ShowExplores';
 
 const Explore = () => {
@@ -11,25 +12,28 @@ const Explore = () => {
             .then(data => setCameras(data));
     }, []);
     return (
-        <div className="my-5 text-center container">
-            <h1>All Available Cameras</h1>
+        <div>
+            <div className="my-5 text-center container">
+                <h1>All Available Cameras</h1>
 
-            {cameras.length === 0 && (
-                <div className="d-flex justify-content-center pt-5 mt-5">
-                    <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                {cameras.length === 0 && (
+                    <div className="d-flex justify-content-center pt-5 mt-5">
+                        <div className="spinner-border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
 
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                {cameras.map(camera => (
-                    <ShowExplores
-                        key={camera.id}
-                        camera={camera}
-                    ></ShowExplores>
-                ))}
+                <div className="row row-cols-1 row-cols-md-3 g-4">
+                    {cameras.map(camera => (
+                        <ShowExplores
+                            key={camera.id}
+                            camera={camera}
+                        ></ShowExplores>
+                    ))}
+                </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

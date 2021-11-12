@@ -1,6 +1,7 @@
 import Products from '../Products/Products';
 import ShowReviews from '../ShowReviews/ShowReviews';
 import SpecialOffers from '../special offers/SpecialOffers';
+import Footer from '../Footer/Footer';
 import Banner from './Banner';
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <div className="my-5">
                 <SpecialOffers></SpecialOffers>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
