@@ -1,4 +1,3 @@
-// import { Input, Select } from '@mui/material';
 import React from 'react';
 import './Review.css';
 import { useForm } from 'react-hook-form';
@@ -34,13 +33,21 @@ const Review = () => {
                     onBlur={onBlur}
                 >
                     <option value="5">5</option>
+                    <option value="4.75">4.75</option>
                     <option value="4.5">4.5</option>
+                    <option value="4.25">4.25</option>
                     <option value="4">4</option>
+                    <option value="3.75">3.75</option>
                     <option value="3.5">3.5</option>
+                    <option value="3.25">3.25</option>
                     <option value="3">3</option>
+                    <option value="2.75">2.75</option>
                     <option value="2.5">2.5</option>
+                    <option value="2.25">2.25</option>
                     <option value="2">2</option>
+                    <option value="1.75">1.75</option>
                     <option value="1.5">1.5</option>
+                    <option value="1.25">1.25</option>
                     <option value="1">1</option>
                 </select>
             </>
