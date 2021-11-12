@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.5b006100.chunk.css",
-    "main.js": "/static/js/main.9c10100d.chunk.js",
-    "main.js.map": "/static/js/main.9c10100d.chunk.js.map",
+    "main.js": "/static/js/main.00fb0dc6.chunk.js",
+    "main.js.map": "/static/js/main.00fb0dc6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.df131940.js",
     "runtime-main.js.map": "/static/js/runtime-main.df131940.js.map",
-    "static/js/2.feefc704.chunk.js": "/static/js/2.feefc704.chunk.js",
-    "static/js/2.feefc704.chunk.js.map": "/static/js/2.feefc704.chunk.js.map",
+    "static/js/2.ed5603bc.chunk.js": "/static/js/2.ed5603bc.chunk.js",
+    "static/js/2.ed5603bc.chunk.js.map": "/static/js/2.ed5603bc.chunk.js.map",
     "static/js/3.5f265fc5.chunk.js": "/static/js/3.5f265fc5.chunk.js",
     "static/js/3.5f265fc5.chunk.js.map": "/static/js/3.5f265fc5.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.5b006100.chunk.css.map": "/static/css/main.5b006100.chunk.css.map",
-    "static/js/2.feefc704.chunk.js.LICENSE.txt": "/static/js/2.feefc704.chunk.js.LICENSE.txt",
+    "static/js/2.ed5603bc.chunk.js.LICENSE.txt": "/static/js/2.ed5603bc.chunk.js.LICENSE.txt",
     "static/media/Error.css": "/static/media/5203299.ce293654.jpg",
     "static/media/about.css": "/static/media/colleagues-giving-fist-bump.6b911b47.jpg",
+    "static/media/special-offer-megaphone-sticker-2495298.dbfd94f5.jpg": "/static/media/special-offer-megaphone-sticker-2495298.dbfd94f5.jpg",
     "static/media/Banner.css": "/static/media/wp1873195.aab2f7a2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.df131940.js",
-    "static/js/2.feefc704.chunk.js",
+    "static/js/2.ed5603bc.chunk.js",
     "static/css/main.5b006100.chunk.css",
-    "static/js/main.9c10100d.chunk.js"
+    "static/js/main.00fb0dc6.chunk.js"
   ]
 }

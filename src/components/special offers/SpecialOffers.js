@@ -8,7 +8,7 @@ const SpecialOffers = () => {
         <div className="text-center">
             <h2 className="text-primary">Special Offers</h2>
             <div className="container d-md-flex justify-content-center">
-                <div className="card border border-success me-4 p-4">
+                <div className="card border border-success me-4 p-4 mt-4">
                     <div className="h-100">
                         <h1>Special Offers 1</h1>
                         <img className="img-fluid w-50" src={img1} alt=""></img>
@@ -26,7 +26,7 @@ const SpecialOffers = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="card border border-success p-4">
+                <div className="card border border-success p-4 mt-4">
                     <div className="h-100">
                         <h1>Special Offers 2</h1>
                         <img className="img-fluid w-50" src={img1} alt=""></img>

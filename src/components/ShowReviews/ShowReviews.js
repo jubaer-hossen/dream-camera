@@ -16,7 +16,7 @@ const ShowReviews = () => {
     return (
         <div className="text-center container mt-5">
             <h1>All reviews</h1>
-            <div className="row row-cols-1 row-cols-md-4 g-4 my-5">
+            <div className="row row-cols-1 row-cols-md-4 g-4 mb-5 mt-2">
                 {reviews.map(review => (
                     <div key={review._id} className="col">
                         {reviews.length === 0 && (
