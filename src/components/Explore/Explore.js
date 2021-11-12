@@ -12,6 +12,8 @@ const Explore = () => {
     }, []);
     return (
         <div className="my-5 text-center container">
+            <h1>All Available Cameras</h1>
+
             {cameras.length === 0 && (
                 <div className="d-flex justify-content-center pt-5 mt-5">
                     <div className="spinner-border" role="status">
@@ -19,7 +21,7 @@ const Explore = () => {
                     </div>
                 </div>
             )}
-            <h1>All Available Cameras</h1>
+
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {cameras.map(camera => (
                     <ShowExplores
