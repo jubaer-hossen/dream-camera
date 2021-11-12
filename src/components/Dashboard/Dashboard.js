@@ -69,13 +69,13 @@ function Dashboard(props) {
 
                         <Link to={`${url}/ManageAllServices`}>
                             <button className="btn fw-bold">
-                                MANAGE SERVICES
+                                MANAGE PRODUCT
                             </button>
                         </Link>
 
                         <Link to={`${url}/addNewService`}>
                             <button className="btn fw-bold">
-                                ADD NEW SERVICES
+                                ADD NEW PRODUCT
                             </button>
                         </Link>
 
