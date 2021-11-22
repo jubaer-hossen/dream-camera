@@ -13,6 +13,28 @@ const MyOrder = () => {
             .then(data => setOrders(data));
     }, [user.email]);
 
+    const handleDelete = id => {
+        // console.log(id);
+        const proceed = window.confirm('Are you sure you want to Cancel');
+        if (proceed) {
+            const url = `https://gentle-citadel-90786.herokuapp.com/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        alert('deleted successfully');
+                        const remaining = orders.filter(
+                            order => order._id !== id
+                        );
+                        setOrders(remaining);
+                    }
+                });
+        }
+    };
+
     return (
         <div className="text-center review">
             <h1>
@@ -31,7 +53,7 @@ const MyOrder = () => {
                                 </div>
                             </div>
                         )}
-                        <div className="card h-100 shadow">
+                        <div className="card h-100 shadow zoom">
                             <div>
                                 <img
                                     src={
@@ -42,6 +64,7 @@ const MyOrder = () => {
                                     alt="..."
                                 />
                             </div>
+                            <br />
                             <div className="card-body">
                                 <div>
                                     <h4 className="card-title">
@@ -72,6 +95,18 @@ const MyOrder = () => {
                                         {order.orderCondition}
                                     </span>
                                 </h6>
+                                <div>
+                                    <button
+                                        className={
+                                            order.orderCondition !== 'Shipped'
+                                                ? 'btn btn-danger mx-2 px-5 my-4'
+                                                : 'disabled btn btn-danger mx-2 px-5 my-4'
+                                        }
+                                        onClick={() => handleDelete(order._id)}
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
