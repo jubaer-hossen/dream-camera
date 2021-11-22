@@ -55,7 +55,7 @@ const ManageAllServices = () => {
                                         service.img ||
                                         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSC0MMnbREPAf4u7Jp5izKWj_IIn9wU7gEA&usqp=CAU'
                                     }
-                                    className="card-img-top mt-2"
+                                    className="card-img-top mt-3"
                                     alt="..."
                                 />
                             </div>
