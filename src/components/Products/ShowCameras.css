@@ -1,0 +1,14 @@
+.zoom {
+    overflow: hidden;
+}
+
+.zoom img {
+    height: 85%;
+    width: 85%;
+    margin: 0 auto 0 auto;
+}
+
+.zoom:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+}

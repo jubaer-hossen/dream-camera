@@ -32,7 +32,7 @@ const ManageAllServices = () => {
         <div className="container text-center">
             <h1 className="my-5">Manage All Services / Orders </h1>
 
-            <div className="row row-cols-1 row-cols-md-3 g-4 my-5">
+            <div className="row row-cols-1 row-cols-md-4 g-4 my-5">
                 {services.map(service => (
                     <div className="col">
                         <div className="card h-100 shadow">

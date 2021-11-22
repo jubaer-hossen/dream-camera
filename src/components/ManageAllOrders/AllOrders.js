@@ -68,7 +68,7 @@ const AllOrders = () => {
                 {orders.length <= 1 ? 'Total Order: ' : 'Total Orders: '}
                 {orders.length}
             </h2>
-            <div className="row row-cols-1 row-cols-md-2 g-4 my-5">
+            <div className="row row-cols-1 row-cols-md-4 g-4 my-5">
                 {orders.map(order => (
                     <div key={order._id} className="col">
                         {orders.length === 0 && (
@@ -80,30 +80,30 @@ const AllOrders = () => {
                                 </div>
                             </div>
                         )}
-                        <div className="card h-100 shadow">
-                            <div>
-                                <img
-                                    src={
-                                        order.productImg ||
-                                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSC0MMnbREPAf4u7Jp5izKWj_IIn9wU7gEA&usqp=CAU'
-                                    }
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                            </div>
+                        <div className="card h-100 shadow zoom">
+                            <img
+                                src={
+                                    order.productImg ||
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSC0MMnbREPAf4u7Jp5izKWj_IIn9wU7gEA&usqp=CAU'
+                                }
+                                className="card-img-top"
+                                alt="..."
+                            />
+
                             <div className="card-body">
                                 <div>
                                     <h4 className="card-title">
                                         {order.productName}
                                     </h4>
                                     <p className="card-text">
-                                        {order.productDetails}
+                                        {order.productDetails.slice(0, 150)}
                                     </p>
-
-                                    <h3 className="card-title">
-                                        Price: {order.productPrice}
-                                    </h3>
                                 </div>
+                            </div>
+                            <div>
+                                <h3 className="card-title">
+                                    Price: {order.productPrice}
+                                </h3>
                             </div>
                             <div className="border shadow pt-3 mb-3">
                                 <h4 className="card-title">{order.Name}</h4>

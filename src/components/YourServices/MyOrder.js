@@ -19,7 +19,7 @@ const MyOrder = () => {
                 {orders.length <= 1 ? 'Your Order: ' : 'Your Orders: '}
                 {orders.length}
             </h1>
-            <div className="row row-cols-1 row-cols-md-2 g-4 my-5">
+            <div className="row row-cols-1 row-cols-md-4 g-4 my-5">
                 {orders.map(order => (
                     <div key={order._id} className="col">
                         {orders.length === 0 && (
@@ -48,7 +48,7 @@ const MyOrder = () => {
                                         {order.productName}
                                     </h4>
                                     <p className="card-text">
-                                        {order.productDetails}
+                                        {order.productDetails.slice(0, 50)}
                                     </p>
 
                                     <h3 className="card-title">
@@ -57,11 +57,13 @@ const MyOrder = () => {
                                 </div>
                             </div>
                             <div className="border shadow pt-3 mb-3">
-                                <h4 className="card-title">{order.Name}</h4>
-                                <h5 className="card-title">{order.email}</h5>
-                                <h5 className="card-title">
+                                <h3>Customer details:</h3>
+
+                                <h5 className="card-title">{order.Name}</h5>
+                                <h6 className="card-title">{order.email}</h6>
+                                <h6 className="card-title">
                                     Address: {order.address}
-                                </h5>
+                                </h6>
                                 <p>Phone: {order.phone}</p>
                                 <br />
                                 <h6>
