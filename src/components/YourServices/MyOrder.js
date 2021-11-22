@@ -60,7 +60,7 @@ const MyOrder = () => {
                                         order.productImg ||
                                         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSC0MMnbREPAf4u7Jp5izKWj_IIn9wU7gEA&usqp=CAU'
                                     }
-                                    className="card-img-top"
+                                    className="card-img-top mt-2"
                                     alt="..."
                                 />
                             </div>
